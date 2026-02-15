@@ -2,8 +2,8 @@
 
 A minimal full-stack web application that allows users to create a poll, share it via a unique link, and collect votes with results updating in real time for all viewers.
 
-Live Demo: <PUBLIC_URL_HERE>  
-Repository: <GITHUB_URL_HERE>
+Live Demo: ```https://applyo-poll-room.vercel.app ``` 
+Repository: ```https://github.com/arnabjana-dev/applyo-poll-room```
 
 ---
 

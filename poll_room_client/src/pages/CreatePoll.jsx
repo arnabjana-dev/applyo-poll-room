@@ -34,7 +34,6 @@ const CreatePoll = () => {
     e.preventDefault();
     setError("");
 
-    // Validation
     if (!question.trim()) {
       setError("Please enter a question");
       return;
@@ -53,7 +52,6 @@ const CreatePoll = () => {
         options: validOptions,
       });
 
-      // Navigate to the new poll room
       navigate(`/poll/${response.data.id}`);
     } catch (err) {
       setError(err.message || "Failed to create poll");

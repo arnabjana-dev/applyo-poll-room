@@ -7,6 +7,7 @@ export const castVote = async (req: VoterRequest, res: Response) => {
     const { pollId, optionId } = req.body;
     const voterId = req.voterId;
     const ipAddress = req.ip ?? "";
+    console.log({ipAddress})
 
     // Input validation
     if (!voterId) {

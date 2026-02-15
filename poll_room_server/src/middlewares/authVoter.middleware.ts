@@ -51,8 +51,8 @@ function issueNewToken(req: VoterRequest, res: Response, next: NextFunction) {
   res.cookie(COOKIE_NAME, newToken, {
     httpOnly: true,
     secure: envConfig.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year
+    sameSite: envConfig.NODE_ENV === "production" ? "none" : "lax",
+    maxAge: 1000 * 60 * 60 * 24 * 365,
   });
 
   req.voterId = voterId;
